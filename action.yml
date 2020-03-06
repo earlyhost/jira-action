@@ -1,5 +1,24 @@
-name: Jira Callback Action
-description: executes a callback to jira if issue was merged to master
+name: 'Transfer files via SCP'
+description: 'transfer files or directories via scp in Linux'
 runs:
   using: 'docker'
-  image: 'docker://debian:stetch-slim'
+  image: 'Dockerfile'
+
+inputs:
+  host: 
+    description: 'scp host address or ip address'
+  port:
+    description: 'scp port on remote machine'
+    default: 22
+  username:
+    description: 'scp username'
+  password:
+    description: 'scp password'
+  target:
+    description: 'target path on remote server on which files should be stored'
+  source:
+    description: 'files that should be transfered'
+
+branding: 
+  color: 'purple'
+  icon: 'hard-drive'
