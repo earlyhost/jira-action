@@ -1,0 +1,5 @@
+name: Jira Callback Action
+description: executes a callback to jira if issue was merged to master
+runs:
+  using: 'docker'
+  image: 'docker://debian:stetch-slim'
